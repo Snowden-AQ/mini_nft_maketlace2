@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
 import 'package:mini_nft_maketlace2/core/resourses/fonteManager.dart';
@@ -29,6 +31,19 @@ class OnBoardingPage extends StatelessWidget {
           children: [
             SizedBox(height: 50,),
             Text(StringManager.titlOnbordingPage,textAlign: TextAlign.start,style: TextStyle(color: ColorManger.kColorWite,fontSize: FontSize.fz_36,fontWeight: FontWeight.bold,fontFamily: FonteManager.sfProDisplay),),
+            Spacer(),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                child: Container(
+                  height: 200,
+                  width: 310,
+                  color: ColorManger.kColorWite.withOpacity(0.1),
+                ),
+              ),
+            ),
+            SizedBox(height: 70,)
 
           ],
         ),
