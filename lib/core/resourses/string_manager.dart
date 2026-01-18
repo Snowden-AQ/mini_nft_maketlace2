@@ -4,4 +4,5 @@ class StringManager{
   static const String titleCardOnbordingPage = "Explore and Mint NFTs";
   static const String descCardOnBordingPage = "You can buy and sell the NFTs of the best artists in the world.";
   static const String butomTitleCardOnBordingPage  = "Get started now"  ;
+  static const String titleHomePage = "NFT Marketplace";
 }
