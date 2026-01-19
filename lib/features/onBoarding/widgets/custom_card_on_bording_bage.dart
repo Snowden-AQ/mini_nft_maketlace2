@@ -40,7 +40,7 @@ class CustomCardOnBordingBage extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(RadiusManger.r40),
                   child: BackdropFilter(filter: ImageFilter.blur(sigmaX: BlurManger.b100,sigmaY: BlurManger.b100),child: MaterialButton(onPressed: (){
-                    Navigator.pushNamed(context, RouteName.KHomePage);
+                    Navigator.pushReplacementNamed(context, RouteName.KHomePage);
                   },child: const Text(StringManager.butomTitleCardOnBordingPage),),),
 
                 ),
