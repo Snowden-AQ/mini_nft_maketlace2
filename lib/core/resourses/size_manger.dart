@@ -17,7 +17,7 @@ class WeightValue{
 class BlurManger{
   static const double b10=10;
   static const double b100=100;
-
+  static const double b3=3;
 }
 
 
@@ -30,6 +30,10 @@ class RadiusManger{
 }
 class  PaddingValue {
   static const double p30=30;
+}
+
+class PositionValue{
+  static const double ps0=0;
 }
 
 

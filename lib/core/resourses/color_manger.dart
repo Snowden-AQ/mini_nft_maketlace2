@@ -8,4 +8,5 @@ class ColorManger{
  static  const kColorlightBlou =Color(0xff97A9F6);
  static const kColorlightColum =  Color(0xffebebf5);
  static const kColorprimare= Color(0xff211134);
+ static const  kcolorblack = Color(0xFF000000);
 }
