@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
+import 'package:mini_nft_maketlace2/core/resourses/constantes.dart';
 import 'package:mini_nft_maketlace2/core/resourses/fonteManager.dart';
 import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
 import 'package:mini_nft_maketlace2/features/home/widgets/custom_categore_home_page.dart';
@@ -27,17 +28,12 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 300,
-            child: ListView(
+            height:  HeightValue.h167,
+            child: ListView.separated(
               scrollDirection: Axis.horizontal,
-
-              children: [
-                CustomCategoreHomePage(title: "Art",image:AssetManager.catHomePage3,),
-                CustomCategoreHomePage(title: "Art",image:AssetManager.catHomePage2,),
-                CustomCategoreHomePage(title: "Art",image:AssetManager.catHomePage3,),
-              ],
+                itemBuilder: (context, index) => CustomCategoreHomePage(title: Constantes.categryListe[index].title,image:Constantes.categryListe[index].image,), separatorBuilder: (context, index) => SizedBox(width: 9,), itemCount: 3)
             ),
-          )
+
 
 
 
