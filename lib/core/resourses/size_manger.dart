@@ -12,6 +12,7 @@ class WeightValue{
   static const double W200=200;
   static const double W310=310;
   static const double w252_26=252.26;
+  static const double w157=157;
 }
 
 
