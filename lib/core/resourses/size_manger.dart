@@ -6,6 +6,7 @@ static const double h200=200;
 static const double h167=167;
 static const double h45_06=45.06;
 static const double h27=27;
+static const double h139=139;
 }
 
 class WeightValue{
@@ -33,6 +34,7 @@ class RadiusManger{
 class  PaddingValue {
   static const double p30=30;
   static const double p14=14;
+  static const double p8=8;
 }
 
 class PositionValue{

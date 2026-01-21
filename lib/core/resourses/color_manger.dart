@@ -9,4 +9,5 @@ class ColorManger{
  static const kColorlightColum =  Color(0xffebebf5);
  static const kColorprimare= Color(0xff211134);
  static const  kcolorblack = Color(0xFF000000);
+ static const kColorRed = Colors.red;
 }
