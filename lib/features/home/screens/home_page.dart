@@ -38,17 +38,31 @@ class HomePage extends StatelessWidget {
               height:  HeightValue.h167,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => CustomCategoreHomePage(title: Constantes.categryListe[index].title,image:Constantes.categryListe[index].image,), separatorBuilder: (context, index) => SizedBox(width: 9,), itemCount: 3)
+
+                  itemBuilder: (context, index) => CustomCategoreHomePage(
+                    title: Constantes.categryListe[index].title,
+                    image:Constantes.categryListe[index].image,),
+                  separatorBuilder: (context, index) => SizedBox(width: 9,), itemCount: 3)
+
               ),
             SizedBox(height: HeightValue.h27,
 
 
             ),
-            CustomSubTitle(title: StringManager.TrendingCollectionHomePage,),
 
-            CustomCardCollactin(
-              collectionMoudel:CollectionsMoudel(AssetManager.catHomePage1, "tatil", false, 100) ,
+            CustomSubTitle(title: StringManager.TrendingCollectionHomePage,),
+            SizedBox(height: 10,),
+            SizedBox(
+              height: HeightValue.h200,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => CustomCardCollactin(collectionMoudel:
+                  Constantes.collectionList[index]),
+                  separatorBuilder: (context, index) => SizedBox(width: 12,), itemCount: 3),
             )
+
+            //CustomCardCollactin(collectionMoudel: Constantes.collectionList[4],
+
 
 
 
