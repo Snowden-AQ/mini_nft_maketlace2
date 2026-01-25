@@ -1,13 +1,16 @@
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:mini_nft_maketlace2/models/collections_moudel.dart';
 
 import '../../../core/resourses/asset_image_manager.dart';
 import '../../../core/resourses/color_manger.dart';
 import '../../../core/resourses/size_manger.dart';
 
 class CustomCardCollactin extends StatelessWidget {
-  const CustomCardCollactin({super.key});
+  const CustomCardCollactin({super.key, required this.collectionMoudel});
+  final  CollectionsMoudel  collectionMoudel;
 
   @override
   Widget build(BuildContext context) {
@@ -28,17 +31,20 @@ class CustomCardCollactin extends StatelessWidget {
               children: [
                 ClipRRect(
                     borderRadius: BorderRadius.circular(RadiusManger.r27_03),
-                    child: const Image(image: AssetImage(AssetManager.trendingHomePage2),height: HeightValue.h139,)),
+                    child:  Image(image: AssetImage(collectionMoudel.image),height: HeightValue.h139,)),
                 const SizedBox(height: HeightValue.h10,),
 
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("dar"),
+                    Text(collectionMoudel.title),
                     Row(
                       children: [
-                        Icon(CupertinoIcons.heart_fill,color: ColorManger.kColorRed,),
-                        Text("200")
+
+
+                        Icon(CupertinoIcons.heart_fill,color:
+                         collectionMoudel.activelike? ColorManger.kColorRed:Colors.grey,),
+                        Text('${collectionMoudel.countlike}')
                       ],
                     )
                   ],

@@ -7,6 +7,7 @@ import 'package:mini_nft_maketlace2/core/resourses/constantes.dart';
 
 import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
 import 'package:mini_nft_maketlace2/features/home/widgets/custom_categore_home_page.dart';
+import 'package:mini_nft_maketlace2/models/collections_moudel.dart';
 
 import '../../../core/resourses/asset_image_manager.dart';
 import '../../../core/resourses/size_manger.dart';
@@ -45,7 +46,9 @@ class HomePage extends StatelessWidget {
             ),
             CustomSubTitle(title: StringManager.TrendingCollectionHomePage,),
 
-            CustomCardCollactin()
+            CustomCardCollactin(
+              collectionMoudel:CollectionsMoudel(AssetManager.catHomePage1, "tatil", false, 100) ,
+            )
 
 
 
