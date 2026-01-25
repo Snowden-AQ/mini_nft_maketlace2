@@ -6,4 +6,5 @@ class StringManager{
   static const String butomTitleCardOnBordingPage  = "Get started now"  ;
   static const String titleHomePage = "NFT Marketplace";
   static const String  TrendingCollectionHomePage= "Trending collections";
+  static const String  Top_seller="Top seller";
 }

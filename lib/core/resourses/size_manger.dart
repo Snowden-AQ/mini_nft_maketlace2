@@ -7,6 +7,7 @@ static const double h167=167;
 static const double h45_06=45.06;
 static const double h27=27;
 static const double h139=139;
+static const double h240=240;
 }
 
 class WeightValue{
