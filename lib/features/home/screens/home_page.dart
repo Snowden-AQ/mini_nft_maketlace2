@@ -70,9 +70,14 @@ class HomePage extends StatelessWidget {
             SizedBox(height: HeightValue.h27,),
             CustomSubTitle( title: StringManager.Top_seller,),
             SizedBox(height: 8,),
-            CustomCardTopseller(
+            SizedBox(height:HeightValue.h240 ,child:
+            ListView.separated(
+              scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) =>CustomCardTopseller(
               topSellerModil:TopSellerModel(AssetManager.topSeller2, "title", "subtitl", true, 20, 50) ,
             )
+                , separatorBuilder: (context, index) => SizedBox(width: 9,),
+                itemCount: 3),)
 
 
             //CustomCardCollactin(collectionMoudel: Constantes.collectionList[4],
