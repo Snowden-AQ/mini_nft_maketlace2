@@ -1,6 +1,7 @@
 import 'package:mini_nft_maketlace2/core/resourses/asset_image_manager.dart';
 import 'package:mini_nft_maketlace2/models/category_models.dart';
 import 'package:mini_nft_maketlace2/models/collections_moudel.dart';
+import 'package:mini_nft_maketlace2/models/top_seller_model.dart';
 
 class Constantes{
   static List<CategoryModels> categryListe =[
@@ -13,6 +14,11 @@ class Constantes{
     CollectionsMoudel(AssetManager.trendingHomePage3, "Portrait Art",true, 200),
   ];
 
+  static List<TopSellerModel>topSellerList=[
+    TopSellerModel(AssetManager.topSeller1, "title", "subtitl1", true, 20, 50,) ,
+    TopSellerModel(AssetManager.topSeller2, "title2", "subtitl2", false, 20, 50,) ,
+    TopSellerModel(AssetManager.topSeller3, "title", "subtitl3", true, 20, 50,) ,
+  ];
 
 
 }

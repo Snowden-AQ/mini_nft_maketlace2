@@ -4,21 +4,19 @@
 
 
 
-import 'dart:ui' show ImageFilter;
 
 
-import 'package:flutter/cupertino.dart' show CupertinoIcons;
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:mini_nft_maketlace2/core/resourses/asset_image_manager.dart';
+
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
 import 'package:mini_nft_maketlace2/core/resourses/constantes.dart';
-import 'package:mini_nft_maketlace2/core/resourses/fonteManager.dart';
+
 import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
 import 'package:mini_nft_maketlace2/features/home/widgets/custom_card_topseller.dart';
 import 'package:mini_nft_maketlace2/features/home/widgets/custom_categore_home_page.dart';
 import '../../../core/resourses/size_manger.dart';
-import '../../../models/top_seller_model.dart';
+
 import '../widgets/custom_card_collactin.dart';
 import '../widgets/custom_sub_title.dart';
 
@@ -74,7 +72,8 @@ class HomePage extends StatelessWidget {
             ListView.separated(
               scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) =>CustomCardTopseller(
-              topSellerModil:TopSellerModel(AssetManager.topSeller2, "title", "subtitl", true, 20, 50) ,
+                  topSellerModil:  Constantes.topSellerList[index],
+
             )
                 , separatorBuilder: (context, index) => SizedBox(width: 9,),
                 itemCount: 3),)
