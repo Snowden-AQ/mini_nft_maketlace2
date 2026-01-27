@@ -7,6 +7,8 @@
 
 
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
@@ -21,12 +23,52 @@ import '../widgets/custom_card_collactin.dart';
 import '../widgets/custom_sub_title.dart';
 
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+   int index =0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: Stack(
+        alignment: AlignmentGeometry.center,
+        children: [
+
+          ClipRRect(
+            borderRadius: BorderRadius.circular(50),
+
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: BlurManger.b100,sigmaY: BlurManger.b100
+              ),
+              child: Container(
+                padding:  EdgeInsets.all(PaddingValue.p14),
+                height: HeightValue.h90,
+                color: ColorManger.kColorWite.withAlpha(26),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.home,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                    Icon(Icons.stacked_bar_chart,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                    Container(width: 39,),
+                    Icon(Icons.search,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                    Icon(Icons.person,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(color: Colors.red,height: 50,width: 20,),
+        ],
+      ),
       appBar: AppBar(
         actions: [Text("data")],
         backgroundColor:Colors.transparent ,
@@ -47,7 +89,7 @@ class HomePage extends StatelessWidget {
                   itemBuilder: (context, index) => CustomCategoreHomePage(
                     title: Constantes.categryListe[index].title,
                     image:Constantes.categryListe[index].image,),
-                  separatorBuilder: (context, index) => SizedBox(width: 9,), itemCount: 3)
+                  separatorBuilder: (context, index) => SizedBox(width: 9,), itemCount: Constantes.topSellerList.length)
 
               ),
             SizedBox(height: HeightValue.h27,

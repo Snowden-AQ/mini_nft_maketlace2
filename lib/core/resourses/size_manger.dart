@@ -8,6 +8,7 @@ static const double h45_06=45.06;
 static const double h27=27;
 static const double h139=139;
 static const double h240=240;
+static const double h90=90;
 }
 
 class WeightValue{
@@ -40,6 +41,9 @@ class  PaddingValue {
 
 class PositionValue{
   static const double ps0=0;
+}
+class SizeValue{
+  static const double sv_39 =39;
 }
 
 

@@ -2,8 +2,6 @@ import 'dart:ui' show ImageFilter;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../../core/resourses/asset_image_manager.dart';
 import '../../../core/resourses/color_manger.dart';
 import '../../../core/resourses/fonteManager.dart';
 import '../../../core/resourses/size_manger.dart';
