@@ -9,6 +9,7 @@
 
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
@@ -35,39 +36,57 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double widthScreen= MediaQuery.of(context).size.width;
     return Scaffold(
       extendBody: true,
-      bottomNavigationBar: Stack(
-        alignment: AlignmentGeometry.center,
-        children: [
+      bottomNavigationBar: Container(
+        height: 125,
+        child: Stack(
+          alignment: AlignmentGeometry.center,
+          children: [
 
-          ClipRRect(
-            borderRadius: BorderRadius.circular(50),
-
-            child: BackdropFilter(
-              filter: ImageFilter.blur(
-                sigmaX: BlurManger.b100,sigmaY: BlurManger.b100
-              ),
+            Positioned(
+              bottom: 0,
               child: Container(
-                padding:  EdgeInsets.all(PaddingValue.p14),
-                height: HeightValue.h90,
-                color: ColorManger.kColorWite.withAlpha(26),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(Icons.home,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
-                    Icon(Icons.stacked_bar_chart,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
-                    Container(width: 39,),
-                    Icon(Icons.search,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
-                    Icon(Icons.person,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                width: widthScreen,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50)),
 
-                  ],
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: BlurManger.b100,sigmaY: BlurManger.b100
+                    ),
+                    child: Container(
+                      padding:  EdgeInsets.all(PaddingValue.p14),
+                      height: HeightValue.h90,
+                      color: ColorManger.kColorWite.withAlpha(26),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(Icons.home,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                          Icon(Icons.stacked_bar_chart,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                          Container(width: 39,),
+                          Icon(Icons.search,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                          Icon(Icons.person,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-          Container(color: Colors.red,height: 50,width: 20,),
-        ],
+            Positioned(
+              top: 0,
+              child: Container(
+                child: Icon(CupertinoIcons.add,color: ColorManger.kColorWite,),
+                decoration: ShapeDecoration(shape: StarBorder.polygon(
+                  sides: 6,pointRounding: .5
+                ),color: Colors.white.withAlpha(80),),
+                height:HeightValue.h70,width: WeightValue.w70,),
+            ),
+          ],
+        ),
       ),
       appBar: AppBar(
         actions: [Text("data")],
