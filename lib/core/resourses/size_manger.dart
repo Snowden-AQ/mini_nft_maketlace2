@@ -1,14 +1,15 @@
-class HeightValue{
-static const double h70=70;
-static const double h5 = 5;
-static const double h10=10;
-static const double h200=200;
-static const double h167=167;
-static const double h45_06=45.06;
-static const double h27=27;
-static const double h139=139;
-static const double h240=240;
-static const double h90=90;
+class HeightValue {
+  static const double h70 = 70;
+  static const double h5 = 5;
+  static const double h10 = 10;
+  static const double h200 = 200;
+  static const double h167 = 167;
+  static const double h45_06 = 45.06;
+  static const double h27 = 27;
+  static const double h139 = 139;
+  static const double h240 = 240;
+  static const double h90 = 90;
+  static const double h125 = 125;
 }
 
 class WeightValue{
