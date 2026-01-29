@@ -4,12 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/resourses/color_manger.dart';
-import '../../../core/resourses/route_managers.dart';
+
 import '../../../core/resourses/size_manger.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({super.key, required this.widthScreen});
+  const CustomBottomNavigationBar({super.key, required this.widthScreen, this.onPressedHome, this.onPressedStates});
   final double widthScreen;
+  final VoidCallback?onPressedHome;
+  final VoidCallback?onPressedStates;
 
 
   @override
@@ -38,12 +40,9 @@ class CustomBottomNavigationBar extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(Icons.home,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
+                        IconButton(onPressed: onPressedHome, icon: Icon(Icons.home,color: ColorManger.kColorWite,size: SizeValue.sv_39,),),
 
-                        IconButton(onPressed: () {
-                          Navigator.pushNamed(context, RouteName.kStatePage);
-
-                        }, icon: Icon(Icons.stacked_bar_chart,color: ColorManger.kColorWite,size: SizeValue.sv_39,),),
+                        IconButton(onPressed: onPressedStates, icon: Icon(Icons.stacked_bar_chart,color: ColorManger.kColorWite,size: SizeValue.sv_39,),),
                         Container(width: 39,),
                         Icon(Icons.search,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
                         Icon(Icons.person,color: ColorManger.kColorWite,size: SizeValue.sv_39,),
