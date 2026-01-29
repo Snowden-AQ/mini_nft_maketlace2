@@ -64,12 +64,29 @@ class _HomePageState extends State<HomePage> {
 
 
       ),
-      appBar: AppBar(
-        actions: [Text("data")],
-        backgroundColor:Colors.transparent ,
-        title: Text(index==0? StringManager.titleHomePage:StringManager.States), centerTitle: true,
+      appBar: index==0? AppBar(
+        actions: [
+          Padding(padding:EdgeInsets.only(right: PaddingValue.p14),
+              child: Icon(Icons.more_horiz) ),
 
-      ),
+        ],
+    backgroundColor:Colors.transparent ,
+    title: Text(StringManager.titleHomePage), centerTitle: true,
+
+    )
+      :index ==1?AppBar(
+        actions: [
+          Padding(padding:EdgeInsets.only(right: PaddingValue.p14),
+              child: Icon(Icons.more_horiz) ),
+
+        ],
+        backgroundColor:Colors.transparent ,
+        title: Text(StringManager.titleHomePage), centerTitle: true,
+
+      ):
+          AppBar(title: Text("null"),),
+      
+      
 
       backgroundColor: ColorManger.kColorprimare,
       body: w[index],
