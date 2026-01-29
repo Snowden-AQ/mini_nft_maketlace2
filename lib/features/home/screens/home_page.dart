@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         actions: [Text("data")],
         backgroundColor:Colors.transparent ,
-        title: Text(StringManager.titleHomePage), centerTitle: true,
+        title: Text(index==0? StringManager.titleHomePage:StringManager.States), centerTitle: true,
 
       ),
 

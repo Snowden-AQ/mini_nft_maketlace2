@@ -7,4 +7,5 @@ class StringManager{
   static const String titleHomePage = "NFT Marketplace";
   static const String  TrendingCollectionHomePage= "Trending collections";
   static const String  Top_seller="Top seller";
+  static const String  States="State";
 }
