@@ -31,10 +31,20 @@ class StatePage extends StatelessWidget {
                     ),
                     SizedBox(height: 20,),
                     Container(
+                      decoration: BoxDecoration(
+                        color: ColorManger.kColorPanf,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 16,
+                            spreadRadius: 1,
+                              offset: Offset(0, -6),
+                              color: ColorManger.kColorPanf)
+                        ]
+                      ),
                       height: 3.6,
                       width: WeightValue.w106
                       ,
-                      color: ColorManger.kColorPanf,)
+                      )
                   ],
                 ),
               ),
