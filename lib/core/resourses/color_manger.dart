@@ -11,4 +11,6 @@ class ColorManger{
  static const  kcolorblack = Color(0xFF000000);
  static const kColorRed = Colors.red;
  static const kColorGrey = Colors.grey;
+ static const kColorPanf = Color(0xff976dff);
+
 }
