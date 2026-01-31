@@ -10,4 +10,5 @@ class StringManager{
   static const String  States="State";
   static const String  Ranking="Ranking";
   static const String  Activity="Activity";
+  static const String  All_categories ="All categories ";
 }
