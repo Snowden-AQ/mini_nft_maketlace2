@@ -11,4 +11,5 @@ class StringManager{
   static const String  Ranking="Ranking";
   static const String  Activity="Activity";
   static const String  All_categories ="All categories ";
+  static const String   All_Chains ="All Chains ";
 }

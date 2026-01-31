@@ -8,7 +8,9 @@ import 'package:mini_nft_maketlace2/features/state_page/widgets/custom_sub_tayil
 
 
 class CustomCategorStatsPage extends StatelessWidget {
-  const CustomCategorStatsPage({super.key});
+  const CustomCategorStatsPage({super.key, required this.tatil, required this.icon});
+  final String tatil;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +20,8 @@ class CustomCategorStatsPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
 
-          Icon(Icons.reorder_rounded,color: ColorManger.kColorGrey,),
-          Text(StringManager.All_categories),
+          Icon(icon,color: ColorManger.kColorGrey,),
+          Text(tatil),
           Icon(Icons.arrow_drop_down)
         ],),
       height: 39,width: 153,
