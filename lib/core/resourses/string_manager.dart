@@ -8,4 +8,6 @@ class StringManager{
   static const String  TrendingCollectionHomePage= "Trending collections";
   static const String  Top_seller="Top seller";
   static const String  States="State";
+  static const String  Ranking="Ranking";
+  static const String  Activity="Activity";
 }

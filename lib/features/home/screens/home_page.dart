@@ -9,22 +9,19 @@
 
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
-import 'package:mini_nft_maketlace2/core/resourses/constantes.dart';
+
 
 import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
 import 'package:mini_nft_maketlace2/features/home/screens/home_Second.dart';
-import 'package:mini_nft_maketlace2/features/home/widgets/custom_card_topseller.dart';
-import 'package:mini_nft_maketlace2/features/home/widgets/custom_categore_home_page.dart';
+
+
 import 'package:mini_nft_maketlace2/features/state_page/screen/state_page.dart';
 import '../../../core/resourses/size_manger.dart';
 
 import '../widgets/custom_bottom_navigation_bar.dart';
-import '../widgets/custom_card_collactin.dart';
-import '../widgets/custom_sub_title.dart';
 
 
 class HomePage extends StatefulWidget {
