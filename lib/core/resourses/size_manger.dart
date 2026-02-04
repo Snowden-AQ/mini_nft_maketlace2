@@ -17,6 +17,9 @@ class HeightValue {
 class WeightValue{
   static const double w0_2=0.2;
   static const double w50=50;
+  static const double w10=10;
+  static const double w15=15;
+
   static const double W39=39;
   static const double W200=200;
   static const double W310=310;
