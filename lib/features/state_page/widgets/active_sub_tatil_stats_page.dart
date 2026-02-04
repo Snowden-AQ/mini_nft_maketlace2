@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
+
 import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
 import 'package:mini_nft_maketlace2/core/resourses/fonteManager.dart';
 import 'package:mini_nft_maketlace2/core/resourses/size_manger.dart';
-import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
+
 
 
 class ActiveSubTatilStatsPage extends StatelessWidget {
