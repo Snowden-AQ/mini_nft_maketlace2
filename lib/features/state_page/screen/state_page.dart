@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:mini_nft_maketlace2/core/resourses/asset_image_manager.dart';
+import 'package:mini_nft_maketlace2/core/resourses/color_manger.dart';
 
 import 'package:mini_nft_maketlace2/core/resourses/size_manger.dart';
 import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
@@ -28,12 +31,27 @@ class StatePage extends StatelessWidget {
             CustomCategorStatsPage(tatil: StringManager.All_categories ,icon: Icons.reorder_rounded,),
             SizedBox(width: WeightValue.w50,),
             CustomCategorStatsPage(tatil: StringManager.All_Chains,icon: Icons.link_rounded,),],),
-        CustomTableStatsPage(image: AssetManager.catHomePage1, nameTitle: "nameTitle", subNume: "subNume", cont1: 58955658989656, cont2: 585825, id: 1),
-        CustomTableStatsPage(image: AssetManager.catHomePage1, nameTitle: "nameTitle", subNume: "subNume", cont1: 58955658989656, cont2: 585825, id: 1),
-        CustomTableStatsPage(image: AssetManager.catHomePage1, nameTitle: "nameTitle", subNume: "subNume", cont1: 58955658989656, cont2: 585825, id: 1),
-        CustomTableStatsPage(image: AssetManager.catHomePage1, nameTitle: "nameTitle", subNume: "subNume", cont1: 58955658989656, cont2: 585825, id: 1),
-        CustomTableStatsPage(image: AssetManager.catHomePage1, nameTitle: "nameTitle", subNume: "subNume", cont1: 58955658989656, cont2: 585825, id: 1),
-        CustomTableStatsPage(image: AssetManager.catHomePage1, nameTitle: "nameTitle", subNume: "subNume", cont1: 58955658989656, cont2: 585825, id: 1),
+    Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 9),
+      child: ClipRRect(
+      borderRadius: BorderRadius.circular(RadiusManger.r20),
+      child: BackdropFilter(
+
+      filter: ImageFilter.blur(sigmaX:BlurManger.b10 , sigmaY: BlurManger.b10),
+      child: Container(
+      alignment: Alignment.center,
+         width: 370,
+      height: 300,
+
+      color: ColorManger.kColorWite.withOpacity(0.1),
+      child: ListView.separated(itemBuilder:
+          (context, index) => CustomTableStatsPage(image: AssetManager.trendingHomePage1, nameTitle: "snowden", subNume: 'subNume', cont1: 4586, cont2: 687136, id: 1)
+          , separatorBuilder: (context, index) => SizedBox(height: 10,), itemCount: 30)
+      ),
+      ),
+      ),
+    )
+
 
 
 

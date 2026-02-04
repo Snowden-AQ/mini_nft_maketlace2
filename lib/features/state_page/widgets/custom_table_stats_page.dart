@@ -19,11 +19,12 @@ class CustomTableStatsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 350,
+    return Container(
+      width: 380,
+
       child: Padding(
 
-        padding: const EdgeInsets.all(9),
+        padding: const EdgeInsets.all(14),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -51,7 +52,7 @@ class CustomTableStatsPage extends StatelessWidget {
                       fontSize: 11, fontFamily: FonteManager.sfProDisplay),),
                 ],)
               ,),
-            SizedBox(width: 10,),
+            Spacer(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -69,6 +70,7 @@ class CustomTableStatsPage extends StatelessWidget {
                     fontSize: 11,
                     fontWeight: FontWeight.bold),)
               ],
+
             )
           ],
         ),
