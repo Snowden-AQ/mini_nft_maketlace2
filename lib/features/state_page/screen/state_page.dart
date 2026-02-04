@@ -9,6 +9,7 @@ import 'package:mini_nft_maketlace2/core/resourses/string_manager.dart';
 
 import 'package:mini_nft_maketlace2/features/state_page/widgets/custom_categor_stats_page.dart' show CustomCategorStatsPage;
 import 'package:mini_nft_maketlace2/features/state_page/widgets/custom_sub_tayil_stats.dart';
+import 'package:mini_nft_maketlace2/models/tabol_row_model.dart';
 
 import '../widgets/custom_table_stats_page.dart';
 
@@ -52,7 +53,7 @@ class StatePage extends StatelessWidget {
 
 
             itemBuilder:
-            (context, index) => CustomTableStatsPage(image: AssetManager.trendingHomePage1, nameTitle: "snowden", subNume: 'subNume', cont1: 4586, cont2: 687136, id: 1)
+            (context, index) => CustomTableStatsPage(tableRowModel: TableRowModel(index +1,index%2==0?AssetManager.catHomePage3:AssetManager.onBoridingBackGroundImage, "snowden$index +1", "sub#$index +3", 88885, 854762, index% 3==0?true:false),)
             , separatorBuilder: (context, index) => SizedBox(height: 10,), itemCount: 30)
         ),
         ),

@@ -4,19 +4,15 @@ import 'package:mini_nft_maketlace2/core/resourses/fonteManager.dart';
 
 import 'package:mini_nft_maketlace2/core/resourses/size_manger.dart';
 
+import '../../../models/tabol_row_model.dart';
+
 
 
 
 
 class CustomTableStatsPage extends StatelessWidget {
-  const CustomTableStatsPage({super.key, required this.image, required this.nameTitle, required this.subNume, required this.cont1, required this.cont2, required this.id});
-  final int id;
-  final String image;
-  final String nameTitle;
-  final String subNume;
-  final int cont1;
-  final int cont2;
-
+  const CustomTableStatsPage({super.key, required this.tableRowModel, });
+  final TableRowModel  tableRowModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,13 +24,13 @@ class CustomTableStatsPage extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("$id"),
+            Text("${tableRowModel.id}"),
             const SizedBox(width: WeightValue.w10,),
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image(
                 fit: BoxFit.cover,
-                image: AssetImage(image),
+                image: AssetImage(tableRowModel.image),
                 height: HeightValue.h39,
                 width: WeightValue.W39,),
             ),
@@ -44,11 +40,11 @@ class CustomTableStatsPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text(nameTitle, style: TextStyle(color: ColorManger.kColorWite,
+                Text("${tableRowModel.nameTitle}", style: TextStyle(color: ColorManger.kColorWite,
                       fontSize: 15,
                       fontFamily: FonteManager.sfProDisplay,
                       fontWeight: FontWeight.bold),),
-                  Text(subNume, style: TextStyle(
+                  Text("${tableRowModel.subname}", style: TextStyle(
                       fontSize: 11, fontFamily: FonteManager.sfProDisplay),),
                 ],)
               ,),
@@ -59,14 +55,14 @@ class CustomTableStatsPage extends StatelessWidget {
 
                 Row(children: [
                   Icon(Icons.link_rounded, size: 15,),
-                  Text("$cont1", style: TextStyle(
+                  Text("${tableRowModel.cont1}", style: TextStyle(
                       color: ColorManger.kColorWite,
                       fontSize: 13,
                       fontWeight: FontWeight.bold)),
 
 
                 ],),
-                Text("$cont2", style: TextStyle(color: Colors.greenAccent,
+                Text("${tableRowModel.cont2}", style: TextStyle(color: tableRowModel.active? Colors.greenAccent:ColorManger.kColorRed,
                     fontSize: 11,
                     fontWeight: FontWeight.bold),)
               ],
