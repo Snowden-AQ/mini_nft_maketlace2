@@ -19,46 +19,54 @@ class StatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    double listHeight=MediaQuery.of(context).size.height -250;
+    print(listHeight );
+    return SingleChildScrollView(
+      child: Column(
+      
+        children: [
+          SizedBox(height: HeightValue.h27,),
+          CustomSubTayilStats(),
+         const SizedBox(height: HeightValue.h27,),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CustomCategorStatsPage(tatil: StringManager.All_categories ,icon: Icons.reorder_rounded,),
+              SizedBox(width: WeightValue.w50,),
+              CustomCategorStatsPage(tatil: StringManager.All_Chains,icon: Icons.link_rounded,),],),
+          SizedBox(height: 20,),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 9),
+        child: ClipRRect(
+        borderRadius: BorderRadius.circular(RadiusManger.r20),
+        child: BackdropFilter(
+      
+        filter: ImageFilter.blur(sigmaX:BlurManger.b10 , sigmaY: BlurManger.b10),
+        child: Container(
+        alignment: Alignment.center,
+           width: 370,
+        height: 600,
+      
+        color: ColorManger.kColorWite.withOpacity(0.1),
+        child: ListView.separated(
 
-      children: [
-        SizedBox(height: HeightValue.h27,),
-        CustomSubTayilStats(),
-       const SizedBox(height: HeightValue.h27,),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CustomCategorStatsPage(tatil: StringManager.All_categories ,icon: Icons.reorder_rounded,),
-            SizedBox(width: WeightValue.w50,),
-            CustomCategorStatsPage(tatil: StringManager.All_Chains,icon: Icons.link_rounded,),],),
-    Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 9),
-      child: ClipRRect(
-      borderRadius: BorderRadius.circular(RadiusManger.r20),
-      child: BackdropFilter(
 
-      filter: ImageFilter.blur(sigmaX:BlurManger.b10 , sigmaY: BlurManger.b10),
-      child: Container(
-      alignment: Alignment.center,
-         width: 370,
-      height: 300,
-
-      color: ColorManger.kColorWite.withOpacity(0.1),
-      child: ListView.separated(itemBuilder:
-          (context, index) => CustomTableStatsPage(image: AssetManager.trendingHomePage1, nameTitle: "snowden", subNume: 'subNume', cont1: 4586, cont2: 687136, id: 1)
-          , separatorBuilder: (context, index) => SizedBox(height: 10,), itemCount: 30)
+            itemBuilder:
+            (context, index) => CustomTableStatsPage(image: AssetManager.trendingHomePage1, nameTitle: "snowden", subNume: 'subNume', cont1: 4586, cont2: 687136, id: 1)
+            , separatorBuilder: (context, index) => SizedBox(height: 10,), itemCount: 30)
+        ),
+        ),
+        ),
+      )
+      
+      
+      
+      
+      
+      
+      
+        ],
       ),
-      ),
-      ),
-    )
-
-
-
-
-
-
-
-      ],
     );
   }
 }
